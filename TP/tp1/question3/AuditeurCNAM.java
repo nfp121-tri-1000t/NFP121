@@ -49,6 +49,8 @@ public class AuditeurCNAM {
         
            lognom = lognom.replaceAll(" ","_");
             lognom = lognom.replaceAll("-","_");
+          lognom = lognom.replaceAll("\"","_");
+          lognom = lognom.replaceAll("\'","_");
           
          lognom=lognom.toLowerCase();
          lognom = lognom.replaceAll("[ийкл]","e");
@@ -57,14 +59,21 @@ public class AuditeurCNAM {
             lognom = lognom.replaceAll("[ав]","a");
             lognom = lognom.replaceAll("Ф","o");
             
+            
          if(lognom.length()>6) {
              lognom= lognom.substring(0,6);
            }
         
          
         
-        String logprenom = prenom().toLowerCase().substring(0,1) ;
-        
+        String logprenom = prenom().toLowerCase() ;
+               logprenom = logprenom.replaceAll("[ийкл]","e");
+          logprenom = logprenom.replaceAll("[ыщ]","u");
+           logprenom = logprenom.replaceAll("[по]","i");
+            logprenom = logprenom.replaceAll("[ав]","a");
+            logprenom = logprenom.replaceAll("Ф","o");
+            logprenom = logprenom.substring(0,1);
+            
         return lognom + "_" + logprenom ;// а complйter
     }
 
