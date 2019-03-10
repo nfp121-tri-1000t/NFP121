@@ -46,35 +46,32 @@ public class AuditeurCNAM {
      */
     public String login() {
         String lognom = nom();
-        
-           lognom = lognom.replaceAll(" ","_");
-            lognom = lognom.replaceAll("-","_");
-          lognom = lognom.replaceAll("\"","_");
-          lognom = lognom.replaceAll("\'","_");
-          
-         lognom=lognom.toLowerCase();
-         lognom = lognom.replaceAll("[ийкл]","e");
-          lognom = lognom.replaceAll("[ыщ]","u");
-           lognom = lognom.replaceAll("[по]","i");
-            lognom = lognom.replaceAll("[ав]","a");
-            lognom = lognom.replaceAll("Ф","o");
-            
-            
-         if(lognom.length()>6) {
+             String logprenom = prenom();
+        if(lognom.length()>6) {
              lognom= lognom.substring(0,6);
            }
         
+         logprenom = logprenom.substring(0,1);
          
+         String loginshort=  lognom + "_" + logprenom;
         
-        String logprenom = prenom().toLowerCase() ;
-               logprenom = logprenom.replaceAll("[ийкл]","e");
-          logprenom = logprenom.replaceAll("[ыщ]","u");
-           logprenom = logprenom.replaceAll("[по]","i");
-            logprenom = logprenom.replaceAll("[ав]","a");
-            logprenom = logprenom.replaceAll("Ф","o");
-            logprenom = logprenom.substring(0,1);
+         loginshort=loginshort.toLowerCase();
+           loginshort = loginshort.replaceAll(" ","_");
+            loginshort = loginshort.replaceAll("-","_");
+          loginshort = loginshort.replaceAll("\"","_");
+          loginshort = loginshort.replaceAll("\'","_");
+          
+         
+         loginshort = loginshort.replaceAll("[ийкл]","e");
+          loginshort = loginshort.replaceAll("[ыщ]","u");
+           loginshort = loginshort.replaceAll("[по]","i");
+            loginshort = loginshort.replaceAll("[ав]","a");
+            loginshort = loginshort.replaceAll("Ф","o");
             
-        return lognom + "_" + logprenom ;// а complйter
+            
+       
+            
+        return loginshort ;// а complйter
     }
 
     /**

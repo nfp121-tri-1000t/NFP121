@@ -101,7 +101,7 @@ public class Picture {
         if (sun2 != null) // only if it's painted already...
         {
             
-                sun2.slowMoveVertical(200);
+                sun.slowMoveVertical(200);
             
         }
     }
