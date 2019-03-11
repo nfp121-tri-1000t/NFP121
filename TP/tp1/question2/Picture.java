@@ -98,7 +98,8 @@ public class Picture {
      * Change this picture to use color display
      */
     public void slowMove() {
-        if (sun2 != null) // only if it's painted already...
+        boolean laTerreEstFixe =false;
+        if (sun2 != null && laTerreEstFixe) // only if it's painted already...
         {
             
                 sun.slowMoveVertical(200);

@@ -1,7 +1,7 @@
 #BlueJ package file
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
+editor.fx.0.height=838
+editor.fx.0.width=1550
+editor.fx.0.x=788
 editor.fx.0.y=0
 objectbench.height=92
 objectbench.width=761
@@ -34,8 +34,8 @@ target2.height=62
 target2.name=question2
 target2.type=PackageTarget
 target2.width=80
-target2.x=190
-target2.y=130
+target2.x=200
+target2.y=140
 target3.height=62
 target3.name=question1
 target3.type=PackageTarget
