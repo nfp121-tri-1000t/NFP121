@@ -22,7 +22,7 @@ public class Picture {
     private Triangle roof;
     private Circle sun;
     private Circle sun2;
-
+    public boolean laTerreEstFixe =true;
     /**
      * Constructor for objects of class Picture
      */
@@ -98,7 +98,7 @@ public class Picture {
      * Change this picture to use color display
      */
     public void slowMove() {
-        boolean laTerreEstFixe =false;
+        
         if (sun2 != null && laTerreEstFixe) // only if it's painted already...
         {
             
